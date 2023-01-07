@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>#(title)</title>
+</head>
+
+<body>
+  <h1>#(title)</h1>
+  <form method="post" enctype="application/json">
+      <label for="fname">Title:</label>
+      <br>
+          <input type="text" id="title" name="title">
+      <br>
+      <button type="submit" class="btn btn-primary">Click Me!</button>
+  </form>
+</body>
+</html>
