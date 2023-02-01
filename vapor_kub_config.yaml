@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vapor
+  labels:
+    env: production
+
+spec:
+  containers:
+    - name: vapor_image
+      image: kiarashvosough/images

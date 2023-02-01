@@ -17,9 +17,10 @@ struct TodoController: RouteCollection {
             try await req.view.render("download", ["title": "Hello Vapor Download!"])
         }
 
-        download.post { req async throws in
+        download.post { req async throws -> Response in
             let path = DirectoryConfiguration.detect().publicDirectory + "MyText.txt"
-            return req.fileio.streamFile(at: path)
+            let route = req.fileio.streamFile(at: path)
+            return route
         }
 
         todos.get(use: index)
